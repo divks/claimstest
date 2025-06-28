@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Claims</name>
+    </assembly>
+    <members>
+        <member name="T:Claims.Controllers.ClaimsController">
+            <summary>
+            Controller for handling claim operations
+            </summary>
+        </member>
+        <member name="M:Claims.Controllers.ClaimsController.GetAsync">
+            <summary>
+            Gets all claims
+            </summary>
+        </member>
+        <member name="M:Claims.Controllers.ClaimsController.GetAsync(System.String)">
+            <summary>
+            Gets a claim by ID
+            </summary>
+        </member>
+        <member name="M:Claims.Controllers.ClaimsController.CreateAsync(Claims.Models.DTOs.ClaimDto)">
+            <summary>
+            Creates a new claim
+            </summary>
+        </member>
+        <member name="M:Claims.Controllers.ClaimsController.DeleteAsync(System.String)">
+            <summary>
+            Deletes a claim by ID
+            </summary>
+        </member>
+        <member name="T:Claims.Controllers.CoversController">
+            <summary>
+            Controller for handling cover operations
+            </summary>
+        </member>
+        <member name="M:Claims.Controllers.CoversController.ComputePremiumAsync(Claims.Controllers.PremiumComputeRequest)">
+            <summary>
+            Computes premium for given parameters
+            </summary>
+        </member>
+        <member name="M:Claims.Controllers.CoversController.GetAsync">
+            <summary>
+            Gets all covers
+            </summary>
+        </member>
+        <member name="M:Claims.Controllers.CoversController.GetAsync(System.String)">
+            <summary>
+            Gets a cover by ID
+            </summary>
+        </member>
+        <member name="M:Claims.Controllers.CoversController.CreateAsync(Claims.Models.DTOs.CoverDto)">
+            <summary>
+            Creates a new cover
+            </summary>
+        </member>
+        <member name="M:Claims.Controllers.CoversController.DeleteAsync(System.String)">
+            <summary>
+            Deletes a cover by ID
+            </summary>
+        </member>
+        <member name="T:Claims.Controllers.PremiumComputeRequest">
+            <summary>
+            Request model for premium computation
+            </summary>
+        </member>
+        <member name="T:Claims.Data.ClaimsContext">
+            <summary>
+            Database context for Claims application
+            </summary>
+        </member>
+        <member name="T:Claims.Models.DTOs.ClaimDto">
+            <summary>
+            Data Transfer Object for Claim operations
+            </summary>
+        </member>
+        <member name="T:Claims.Models.DTOs.CoverDto">
+            <summary>
+            Data Transfer Object for Cover operations
+            </summary>
+        </member>
+        <member name="T:Claims.Repositories.ClaimRepository">
+            <summary>
+            Repository implementation for claim data operations
+            </summary>
+        </member>
+        <member name="T:Claims.Repositories.CoverRepository">
+            <summary>
+            Repository implementation for cover data operations
+            </summary>
+        </member>
+        <member name="T:Claims.Repositories.Interfaces.IClaimRepository">
+            <summary>
+            Repository interface for claim data operations
+            </summary>
+        </member>
+        <member name="M:Claims.Repositories.Interfaces.IClaimRepository.GetAllAsync">
+            <summary>
+            Gets all claims
+            </summary>
+        </member>
+        <member name="M:Claims.Repositories.Interfaces.IClaimRepository.GetByIdAsync(System.String)">
+            <summary>
+            Gets a claim by ID
+            </summary>
+        </member>
+        <member name="M:Claims.Repositories.Interfaces.IClaimRepository.AddAsync(Claims.Claim)">
+            <summary>
+            Adds a new claim
+            </summary>
+        </member>
+        <member name="M:Claims.Repositories.Interfaces.IClaimRepository.DeleteAsync(System.String)">
+            <summary>
+            Deletes a claim by ID
+            </summary>
+        </member>
+        <member name="T:Claims.Repositories.Interfaces.ICoverRepository">
+            <summary>
+            Repository interface for cover data operations
+            </summary>
+        </member>
+        <member name="M:Claims.Repositories.Interfaces.ICoverRepository.GetAllAsync">
+            <summary>
+            Gets all covers
+            </summary>
+        </member>
+        <member name="M:Claims.Repositories.Interfaces.ICoverRepository.GetByIdAsync(System.String)">
+            <summary>
+            Gets a cover by ID
+            </summary>
+        </member>
+        <member name="M:Claims.Repositories.Interfaces.ICoverRepository.AddAsync(Claims.Cover)">
+            <summary>
+            Adds a new cover
+            </summary>
+        </member>
+        <member name="M:Claims.Repositories.Interfaces.ICoverRepository.DeleteAsync(System.String)">
+            <summary>
+            Deletes a cover by ID
+            </summary>
+        </member>
+        <member name="T:Claims.Services.AuditService">
+            <summary>
+            Asynchronous audit service implementation
+            </summary>
+        </member>
+        <member name="T:Claims.Services.ClaimService">
+            <summary>
+            Service implementation for claim operations
+            </summary>
+        </member>
+        <member name="T:Claims.Services.CoverService">
+            <summary>
+            Service implementation for cover operations with fixed premium calculation
+            </summary>
+        </member>
+        <member name="T:Claims.Services.Interfaces.IAuditService">
+            <summary>
+            Service interface for auditing operations
+            </summary>
+        </member>
+        <member name="M:Claims.Services.Interfaces.IAuditService.AuditClaimAsync(System.String,System.String)">
+            <summary>
+            Audits a claim operation asynchronously
+            </summary>
+        </member>
+        <member name="M:Claims.Services.Interfaces.IAuditService.AuditCoverAsync(System.String,System.String)">
+            <summary>
+            Audits a cover operation asynchronously
+            </summary>
+        </member>
+        <member name="T:Claims.Services.Interfaces.IClaimService">
+            <summary>
+            Service interface for claim operations
+            </summary>
+        </member>
+        <member name="M:Claims.Services.Interfaces.IClaimService.GetAllAsync">
+            <summary>
+            Gets all claims
+            </summary>
+        </member>
+        <member name="M:Claims.Services.Interfaces.IClaimService.GetByIdAsync(System.String)">
+            <summary>
+            Gets a claim by ID
+            </summary>
+        </member>
+        <member name="M:Claims.Services.Interfaces.IClaimService.CreateAsync(Claims.Claim)">
+            <summary>
+            Creates a new claim
+            </summary>
+        </member>
+        <member name="M:Claims.Services.Interfaces.IClaimService.DeleteAsync(System.String)">
+            <summary>
+            Deletes a claim by ID
+            </summary>
+        </member>
+        <member name="M:Claims.Services.Interfaces.IClaimService.ValidateAsync(Claims.Claim)">
+            <summary>
+            Validates a claim against business rules
+            </summary>
+        </member>
+        <member name="T:Claims.Services.Interfaces.ICoverService">
+            <summary>
+            Service interface for cover operations
+            </summary>
+        </member>
+        <member name="M:Claims.Services.Interfaces.ICoverService.GetAllAsync">
+            <summary>
+            Gets all covers
+            </summary>
+        </member>
+        <member name="M:Claims.Services.Interfaces.ICoverService.GetByIdAsync(System.String)">
+            <summary>
+            Gets a cover by ID
+            </summary>
+        </member>
+        <member name="M:Claims.Services.Interfaces.ICoverService.CreateAsync(Claims.Cover)">
+            <summary>
+            Creates a new cover
+            </summary>
+        </member>
+        <member name="M:Claims.Services.Interfaces.ICoverService.DeleteAsync(System.String)">
+            <summary>
+            Deletes a cover by ID
+            </summary>
+        </member>
+        <member name="M:Claims.Services.Interfaces.ICoverService.ComputePremium(System.DateTime,System.DateTime,Claims.CoverType)">
+            <summary>
+            Computes premium for a cover
+            </summary>
+        </member>
+        <member name="M:Claims.Services.Interfaces.ICoverService.Validate(Claims.Cover)">
+            <summary>
+            Validates a cover against business rules
+            </summary>
+        </member>
+    </members>
+</doc>
